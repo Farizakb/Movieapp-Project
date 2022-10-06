@@ -1,0 +1,52 @@
+<h5 class="card-title mb-4">Leave a Review</h5>
+                    <form  name="sentMessage" method = "POST" novalidate>
+                      {% csrf_token %}
+                      <div class="row">
+                        <div class="control-group form-group col-lg-4 col-md-4">
+                          <div class="controls">
+                            {{form.full_name.errors}}
+
+                            <label>
+                              {{form.full_name.label}}
+                            </label>
+                            {{form.full_name}}
+
+                          </div>
+                        </div>
+                        <div class="control-group form-group col-lg-4 col-md-4">
+                          <div class="controls">
+                            {{form.email.errors}}
+
+                            <label>
+                              {{form.email.label}}
+                            </label>
+                            {{form.email}}
+                          </div>
+                        </div>
+                        <div class="control-group form-group col-lg-4 col-md-4">
+                          <div class="controls">
+                            {{form.stars.errors}}
+
+                            <label>
+                              {{form.stars.label}}
+                            </label>
+                            {{form.stars}}
+                          </div>
+                        </div>
+                      </div>
+                      <div class="control-group form-group">
+                        <div class="controls">
+                          {{form.review.errors}}
+
+                          <label>
+                            {{form.review.label}}
+                          </label>
+                          {{form.review}}
+                        </div>
+                      </div>
+                      <div class="text-right">
+                        <button type="submit" class="btn btn-primary">
+                          Send Message
+                         </button>
+                      </div>
+                    </form>
